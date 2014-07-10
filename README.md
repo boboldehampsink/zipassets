@@ -1,4 +1,4 @@
-Compatibility plugin for Craft CMS
+Zip Assets plugin for Craft CMS
 =================
 
 Plugin that downloads a zipfile with a selection of assets.
