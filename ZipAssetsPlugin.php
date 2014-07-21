@@ -23,7 +23,8 @@ class ZipAssetsPlugin extends BasePlugin
         return 'http://www.itmundi.nl';
     }
     
-    function registerUnitTest() {
+    function registerUnitTest() 
+    {
     
         // Import the test
         Craft::import('plugins.zipassets.tests.ZipAssetsTest');
