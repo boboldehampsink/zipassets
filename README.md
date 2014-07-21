@@ -3,6 +3,8 @@ Zip Assets plugin for Craft CMS
 
 Plugin that downloads a zipfile with a selection of assets.
 
+Important:
+The plugin's folder should be named "zipassets"
 
 Example
 =================
