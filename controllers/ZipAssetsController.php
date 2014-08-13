@@ -10,10 +10,10 @@ class ZipAssetsController extends BaseController
     public function actionDownload() {
                     
         // Get wanted filename
-        $filename = craft()->request->getRequiredPost('filename');
+        $filename = craft()->request->getRequiredParam('filename');
         
         // Get file id's
-        $files = craft()->request->getRequiredPost('files');
+        $files = craft()->request->getRequiredParam('files');
         
         // Get assets
         $criteria = craft()->elements->getCriteria(ElementType::Asset);

@@ -12,8 +12,8 @@ class ZipAssetsTest extends \WebTestCase
         $criteria->limit = 2;
         
         // post asset id and download zip
-        $result = $this->post(
-            str_replace('https', 'ssl', str_replace('/admin/', '/', UrlHelper::getActionUrl('zipAssets/download'))),
+        $result = $this->get(
+            str_replace('https', 'ssl', str_replace('admin/', '', UrlHelper::getActionUrl('zipAssets/download'))),
             array(
                 'filename' => 'testzip',
                 'files' => $criteria->ids()

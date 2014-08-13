@@ -20,7 +20,13 @@ Example
 </form>
 ```
 
+Via url:
+/actions/zipAssets/download?filename=your-zipfile&files[]=123&files[]=234
+
 Changelog
 =================
+###1.0.1###
+ - You can now also download assets via GET
+
 ###1.0###
  - Initial release
