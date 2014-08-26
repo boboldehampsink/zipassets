@@ -1,27 +1,46 @@
 <?php
 namespace Craft;
 
-class ZipAssetsTest extends \WebTestCase 
+class ZipAssetsTest extends BaseTest 
 {
+
+    protected $zipAssetsService;
     
-    function testActionDownload() 
+    public function setUp()
+    {
+    
+        // Get dependencies
+        $dir = __DIR__;
+		$map = array(
+			'\\Craft\\ZipAssetsService' => '/../services/ZipAssetsService.php'
+		);
+
+        // Inject them
+		foreach ($map as $classPath => $filePath)
+		{
+			if (!class_exists($classPath, false))
+			{
+				require_once $dir.$filePath;
+			}
+		}
+    
+        // Construct
+        $this->zipAssetsService = new ZipAssetsService;
+    
+    } 
+    
+    public function testActionDownload() 
     {
     
         // fetch random assets
         $criteria = craft()->elements->getCriteria(ElementType::Asset);
         $criteria->limit = 2;
         
-        // post asset id and download zip
-        $result = $this->get(
-            str_replace('https', 'ssl', str_replace('admin/', '', UrlHelper::getActionUrl('zipAssets/download'))),
-            array(
-                'filename' => 'testzip',
-                'files' => $criteria->ids()
-            )
-        );
+        // send asset ids and generate zip
+        $zipfile = $this->zipAssetsService->download($criteria->ids(), 'testzip');
         
         // check if we got a zip
-        $this->assertMime(array('application/zip; charset=utf-8'));
+        $this->assertTrue(file_exists($zipfile));
         
     }
     
