@@ -11,18 +11,16 @@ class ZipAssetsTest extends BaseTest
     
         // Get dependencies
         $dir = __DIR__;
-		$map = array(
-			'\\Craft\\ZipAssetsService' => '/../services/ZipAssetsService.php'
-		);
+        $map = array(
+            '\\Craft\\ZipAssetsService' => '/../services/ZipAssetsService.php'
+        );
 
         // Inject them
-		foreach ($map as $classPath => $filePath)
-		{
-			if (!class_exists($classPath, false))
-			{
-				require_once $dir.$filePath;
-			}
-		}
+        foreach($map as $classPath => $filePath) {
+            if(!class_exists($classPath, false)) {
+                require_once($dir . $filePath);
+            }
+        }
     
         // Construct
         $this->zipAssetsService = new ZipAssetsService;
