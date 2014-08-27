@@ -25,6 +25,11 @@ Via url:
 
 Changelog
 =================
+###1.1.0###
+ - Now also callable as a service
+ - Now uses Craft's interal zip system
+ - Added unit tests
+
 ###1.0.1###
  - You can now also download assets via GET
 
