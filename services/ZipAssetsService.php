@@ -13,34 +13,25 @@ class ZipAssetsService extends BaseApplicationComponent
         $criteria->limit = null;
         $assets = $criteria->find();
         
-        // Create zip
-        $zip = new \ZipArchive;
-        $zipfile = craft()->path->getTempPath() . $filename . '_' . time() . '.zip';
+        // Set destination zip
+        $destZip = craft()->path->getTempPath() . $filename . '_' . time() . '.zip';
         
-        // Open zip
-        if($zip->open($zipfile, $zip::CREATE) === true) {
+        // Create the zipfile
+        IOHelper::createFile($destZip);
         
-            // Loop through assets
-            foreach($assets as $asset) {
+        // Loop through assets
+        foreach($assets as $asset) {
+        
+            // Get asset path
+            $source = craft()->assetSources->getSourceById($asset->sourceId);
             
-                // Get asset path
-                $source = craft()->assetSources->getSourceById($asset->sourceId);
-                       
-                // Add asset to zip         
-                $zip->addFile($source->settings['path'].$asset->filename, $asset->filename);
-            
-            }
-            
-            // Close zip
-            $zip->close();
-            
-            // Download zip
-            return $zipfile;
+            // Add to zip
+            Zip::add($destZip, $source->settings['path'].$asset->filename, $source->settings['path']);
         
         }
-    
-        // If not redirected, something went wrong
-        throw new Exception(Craft::t('Failed to generate the zipfile'));
+            
+        // Return zip destination
+        return $destZip;
     
     }
     
