@@ -3,11 +3,12 @@ namespace Craft;
 
 class ZipAssetsTest extends BaseTest 
 {
-
-    protected $zipAssetsService;
     
     public function setUp()
     {
+    
+        // PHPUnit complains about not settings this
+        date_default_timezone_set('UTC');
     
         // Get dependencies
         $dir = __DIR__;
@@ -22,8 +23,8 @@ class ZipAssetsTest extends BaseTest
             }
         }
     
-        // Construct
-        $this->zipAssetsService = new ZipAssetsService;
+        // Set components we're going to use
+        $this->setComponent(craft(), 'zipAssets', new ZipAssetsService);
     
     } 
     
@@ -35,10 +36,10 @@ class ZipAssetsTest extends BaseTest
         $criteria->limit = 2;
         
         // send asset ids and generate zip
-        $zipfile = $this->zipAssetsService->download($criteria->ids(), 'testzip');
+        $zipfile = craft()->zipAssets->download($criteria->ids(), 'testzip');
         
         // check if we got a zip
-        $this->assertTrue(file_exists($zipfile));
+        $this->assertFileExists($zipfile);
         
     }
     
