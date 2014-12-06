@@ -2,11 +2,11 @@
     "name": "boboldehampsink/zipassets",
     "description": "Zip Assets Plugin for Craft CMS",
     "authors": [
-		{
-			"name": "Bob Olde Hampsink",
-			"email": "b.oldehampsink@itmundi.nl"
-		}
-	],
+        {
+            "name": "Bob Olde Hampsink",
+            "email": "b.oldehampsink@itmundi.nl"
+        }
+    ],
     "type": "craft-plugin",
     "require": {
         "composer/installers": "~1.0"

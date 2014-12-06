@@ -22,11 +22,14 @@ class ZipAssetsService extends BaseApplicationComponent
         // Loop through assets
         foreach($assets as $asset) {
         
-            // Get asset path
+            // Get asset source
             $source = craft()->assetSources->getSourceById($asset->sourceId);
             
+            // Get asset path
+            $path = craft()->templates->renderObjectTemplate($source->settings['path'], $asset);
+            
             // Add to zip
-            Zip::add($destZip, $source->settings['path'].$asset->filename, $source->settings['path']);
+            Zip::add($destZip, $path.$asset->filename, $path);
         
         }
             

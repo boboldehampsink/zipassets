@@ -10,6 +10,7 @@ Example
 =================
 ```html
 <form method="post" target="_blank">
+	{{ getCsrfInput() }}
     <input type="hidden" name="action" value="zipAssets/download">
     <input type="hidden" name="filename" value="your-zipfile">
     
@@ -23,8 +24,15 @@ Example
 Via url:
 /actions/zipAssets/download?filename=your-zipfile&files[]=123&files[]=234
 
+Roadmap
+=================
+ - Support for Asset Element Actions in Craft 2.3
+
 Changelog
 =================
+###1.2.0###
+ - Now supports source paths with objects (i.e. "{path}/assets")
+
 ###1.1.0###
  - Now also callable as a service
  - Now uses Craft's interal zip system
