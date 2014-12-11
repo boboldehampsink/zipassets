@@ -10,7 +10,7 @@ class ZipAssetsPlugin extends BasePlugin
 
     function getVersion()
     {
-        return '1.2.0';
+        return '1.2.1';
     }
 
     function getDeveloper()

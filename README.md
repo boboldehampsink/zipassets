@@ -30,6 +30,9 @@ Roadmap
 
 Changelog
 =================
+###1.2.1###
+ - Fixed a bug where the asset path was parsed with the wrong variables
+
 ###1.2.0###
  - Now supports source paths with objects (i.e. "{path}/assets")
 
