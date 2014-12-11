@@ -26,7 +26,7 @@ class ZipAssetsService extends BaseApplicationComponent
             $source = craft()->assetSources->getSourceById($asset->sourceId);
             
             // Get asset path
-            $path = craft()->templates->renderObjectTemplate($source->settings['path'], $asset);
+            $path = craft()->config->parseEnvironmentString($source->settings['path']);
             
             // Add to zip
             Zip::add($destZip, $path.$asset->filename, $path);
