@@ -30,6 +30,9 @@ Roadmap
 
 Changelog
 =================
+###1.3.0###
+ - Added support for assets in subfolders
+
 ###1.2.1###
  - Fixed a bug where the asset path was parsed with the wrong variables
 
