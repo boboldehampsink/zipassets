@@ -3,24 +3,23 @@ namespace Craft;
 
 class ZipAssetsPlugin extends BasePlugin
 {
-    function getName()
+    public function getName()
     {
         return Craft::t('Zip Assets');
     }
 
-    function getVersion()
+    public function getVersion()
     {
         return '1.3.0';
     }
 
-    function getDeveloper()
+    public function getDeveloper()
     {
         return 'Bob Olde Hampsink';
     }
 
-    function getDeveloperUrl()
+    public function getDeveloperUrl()
     {
         return 'http://www.itmundi.nl';
     }
-    
 }
