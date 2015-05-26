@@ -43,14 +43,14 @@ class ZipAssetsService extends BaseApplicationComponent
             // Get asset source
             $source = $asset->getSource();
 
-            // Get asset folder
-            $folder = $asset->getFolder();
+             // Get asset source type
+            $sourceType = $source->getSourceType();
 
-            // Get asset path
-            $path = craft()->config->parseEnvironmentString($source->settings['path']).$folder['path'];
+            // Get asset file
+            $file = $sourceType->getLocalCopy($asset);
 
             // Add to zip
-            Zip::add($destZip, $path.$asset->filename, $path);
+            Zip::add($destZip, $file, dirname($file));
         }
 
         // Return zip destination
