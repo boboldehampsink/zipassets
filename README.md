@@ -30,6 +30,10 @@ Roadmap
 
 Changelog
 =================
+###1.4.0###
+ - Added support for all asset source types, so cloud files are now also supported
+ - Added a MIT license
+
 ###1.3.0###
  - Added support for assets in subfolders
 
