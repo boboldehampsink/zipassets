@@ -30,6 +30,9 @@ Roadmap
 
 Changelog
 =================
+###1.4.1###
+ - Remove temporary zip assets
+
 ###1.4.0###
  - Added support for all asset source types, so cloud files are now also supported
  - Added a MIT license

@@ -51,7 +51,7 @@ class ZipAssetsService extends BaseApplicationComponent
 
             // Add to zip
             Zip::add($destZip, $file, dirname($file));
-            
+
             // Remove the file
             IOHelper::deleteFile($file);
         }
