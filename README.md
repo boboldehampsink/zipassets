@@ -13,10 +13,10 @@ Example
 	{{ getCsrfInput() }}
     <input type="hidden" name="action" value="zipAssets/download">
     <input type="hidden" name="filename" value="your-zipfile">
-    
+
     <input type="checkbox" name="files[]" value="123"><!-- asset id -->
     <input type="checkbox" name="files[]" value="234"><!-- asset id -->
-    
+
     <input type="submit" value="Download!">
 </form>
 ```
@@ -30,6 +30,9 @@ Roadmap
 
 Changelog
 =================
+###1.4.2###
+ - Remove temporary zip after download
+
 ###1.4.1###
  - Remove temporary zip assets
 
