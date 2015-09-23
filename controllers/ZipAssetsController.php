@@ -36,7 +36,16 @@ class ZipAssetsController extends BaseController
         // Generate zipfile
         $zipfile = craft()->zipAssets->download($files, $filename);
 
+        // Get zip filename
+        $zipname = IOHelper::getFileName($zipfile);
+
+        // Get zip filecontents
+        $zip = IOHelper::getFileContents($zipfile);
+
+        // Delete zipfile
+        IOHelper::deleteFile($zipfile);
+
         // Download it
-        craft()->request->sendFile(IOHelper::getFileName($zipfile), IOHelper::getFileContents($zipfile), array('forceDownload' => true));
+        craft()->request->sendFile($zipname, $zip, array('forceDownload' => true));
     }
 }
