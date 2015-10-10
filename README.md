@@ -30,6 +30,9 @@ Roadmap
 
 Changelog
 =================
+###1.5.0###
+ - Use original filenames in zip
+
 ###1.4.2###
  - Remove temporary zip after download
 
