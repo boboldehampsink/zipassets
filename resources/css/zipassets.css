@@ -1,0 +1,14 @@
+.element.linked .label {
+	margin-right: 1em;
+}
+.element .download {
+	color: rgba(0, 0, 0, 0.2);
+	display: inline-block;
+	line-height: 1;
+	position: absolute;
+	right: 22px;
+	width: 1em;
+}
+.element .download:hover {
+	color: blue;
+}
