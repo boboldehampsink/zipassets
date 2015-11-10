@@ -24,12 +24,19 @@ Example
 Via url:
 /actions/zipAssets/download?filename=your-zipfile&files[]=123&files[]=234
 
+AdminCP "Download All" button
+=================
+Zipassets also adds a "Download All" button in the AdminCP next to asset fields, which downloads all of the assets in one .zip file.
+![image](https://cloud.githubusercontent.com/assets/7570798/11053063/b959b23c-872b-11e5-9890-5b8254ace53e.png)
 Roadmap
 =================
  - Support for Asset Element Actions in Craft 2.3
 
 Changelog
 =================
+###1.5.1###
+ - Added a "Download All" button to the AdminCP that appears next to asset fields
+
 ###1.5.0###
  - Use original filenames in zip
 

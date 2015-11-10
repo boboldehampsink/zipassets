@@ -54,4 +54,11 @@ class ZipAssetsPlugin extends BasePlugin
     {
         return 'http://www.itmundi.nl';
     }
+
+	function init() {
+		if (craft()->request->isCpRequest() && craft()->userSession->isLoggedIn()) {
+			craft()->templates->includeJsResource("zipassets/js/zipassets.js");
+			craft()->templates->includeCssResource("zipassets/css/zipassets.css");
+		}
+	}
 }
