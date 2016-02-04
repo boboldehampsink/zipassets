@@ -7,9 +7,8 @@ namespace Craft;
  *
  * Unit test for zip assets.
  *
- * @author    Bob Olde Hampsink <b.oldehampsink@itmundi.nl>
- * @copyright Copyright (c) 2015, author
- * @license   http://buildwithcraft.com/license Craft License Agreement
+ * @author    Bob Olde Hampsink <b.oldehampsink@nerds.company>
+ * @copyright Copyright (c) 2016, Bob Olde Hampsink
  *
  * @link      http://github.com/boboldehampsink
  */
