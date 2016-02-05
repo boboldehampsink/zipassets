@@ -1,4 +1,4 @@
-Zip Assets plugin for Craft CMS
+Zip Assets plugin for Craft CMS [![Build Status](https://travis-ci.org/boboldehampsink/zipassets.svg?branch=master)](https://travis-ci.org/boboldehampsink/zipassets) [![Code Coverage](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/badges/coverage.png?b=develop)](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/?branch=develop) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/?branch=develop)
 =================
 
 Plugin that downloads a zipfile with a selection of assets.
