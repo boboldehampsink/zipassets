@@ -28,7 +28,7 @@ before_script:
   - mkdir craft/config
   - echo "<?php return array('user' => 'test');" > craft/config/db.php
   - mkdir craft/storage
-  - mkdir -p craft/plugins/youtube
+  - mkdir -p craft/plugins/zipassets
   - for item in *; do if [[ ! "$item" == "craft" ]]; then mv $item craft/plugins/zipassets; fi; done
   - cd craft/app
   - composer require mockery/mockery
