@@ -26,7 +26,7 @@ class ZipAssetsController extends BaseController
      */
     public function actionDownload()
     {
-        // Get wanted filename
+       // Get wanted filename
         $filename = craft()->request->getRequiredParam('filename');
 
         // Get file id's

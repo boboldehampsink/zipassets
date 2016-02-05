@@ -32,7 +32,7 @@ class ZipAssetsPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.5.0';
+        return '1.5.1';
     }
 
     /**
@@ -53,5 +53,12 @@ class ZipAssetsPlugin extends BasePlugin
     public function getDeveloperUrl()
     {
         return 'http://www.itmundi.nl';
+    }
+
+    function init() {
+        if (craft()->request->isCpRequest() && craft()->userSession->isLoggedIn()) {
+            craft()->templates->includeJsResource("zipassets/js/zipassets.js");
+            craft()->templates->includeCssResource("zipassets/css/zipassets.css");
+        }
     }
 }
