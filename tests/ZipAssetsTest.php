@@ -71,7 +71,7 @@ class ZipAssetsTest extends BaseTest
         $this->setMockElementsService();
 
         $files = array(1);
-        $filename = str_repeat('longfilename', 256);
+        $filename = str_repeat('longfilename', 256 * 256);
 
         $service = new ZipAssetsService();
         $zipfile = $service->download($files, $filename);
