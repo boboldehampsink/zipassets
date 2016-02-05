@@ -26,7 +26,14 @@ Via url:
 
 Roadmap
 =================
- - Support for Asset Element Actions in Craft 2.3
+ - Support for Asset Element Actions
+
+Development
+=================
+Run this from your Craft installation to test your changes to this plugin before submitting a Pull Request
+```bash
+phpunit --bootstrap craft/app/tests/bootstrap.php --configuration craft/plugins/zipassets/phpunit.xml.dist --coverage-text craft/plugins/zipassets/tests
+``
 
 Changelog
 =================
