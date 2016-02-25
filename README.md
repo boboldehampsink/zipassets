@@ -37,6 +37,9 @@ phpunit --bootstrap craft/app/tests/bootstrap.php --configuration craft/plugins/
 
 Changelog
 =================
+###1.5.1###
+ - All service code is now fully covered by unit tests
+
 ###1.5.0###
  - Use original filenames in zip
 
