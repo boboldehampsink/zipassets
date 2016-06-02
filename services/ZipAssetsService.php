@@ -30,6 +30,9 @@ class ZipAssetsService extends BaseApplicationComponent
         $criteria->limit = null;
         $assets = $criteria->find();
 
+        // Replace slashes with dashes
+        $filename = str_replace('/', '-', $filename);
+
         // Set destination zip
         $destZip = craft()->path->getTempPath().$filename.'_'.time().'.zip';
 
