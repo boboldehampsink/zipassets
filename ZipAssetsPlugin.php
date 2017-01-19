@@ -54,4 +54,14 @@ class ZipAssetsPlugin extends BasePlugin
     {
         return 'http://www.itmundi.nl';
     }
+
+    /**
+     * Register actions to asset index.
+     *
+     * @return array
+     */
+    public function addAssetActions($source)
+    {
+        return array('ZipAssets_DownloadFiles');
+    }
 }
