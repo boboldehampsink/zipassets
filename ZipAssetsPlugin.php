@@ -62,6 +62,6 @@ class ZipAssetsPlugin extends BasePlugin
      */
     public function addAssetActions($source)
     {
-        return ['ZipAssets_DownloadFiles'];
+        return array('ZipAssets_DownloadFiles');
     }
 }
