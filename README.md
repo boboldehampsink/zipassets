@@ -1,10 +1,14 @@
-Zip Assets plugin for Craft CMS [![Build Status](https://travis-ci.org/boboldehampsink/zipassets.svg?branch=master)](https://travis-ci.org/boboldehampsink/zipassets) [![Code Coverage](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/badges/coverage.png?b=develop)](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/?branch=develop) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/?branch=develop)
+DEPRECATED - Zip Assets plugin for Craft CMS [![Build Status](https://travis-ci.org/boboldehampsink/zipassets.svg?branch=master)](https://travis-ci.org/boboldehampsink/zipassets) [![Code Coverage](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/badges/coverage.png?b=develop)](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/?branch=develop) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/boboldehampsink/zipassets/?branch=develop)
 =================
 
 Plugin that downloads a zipfile with a selection of assets.
 
 Important:
 The plugin's folder should be named "zipassets"
+
+Deprecated
+=================
+With the release of Craft 3 on 4-4-2018, this plugin has been deprecated. You can still use this with Craft 2 but you are encouraged to use (and develop) a Craft 3 version. At this moment, I have no plans to do so.
 
 Example
 =================
@@ -37,38 +41,38 @@ phpunit --bootstrap craft/app/tests/bootstrap.php --configuration craft/plugins/
 
 Changelog
 =================
-###1.5.1###
+### 1.5.1 ###
  - All service code is now fully covered by unit tests
 
-###1.5.0###
+### 1.5.0 ###
  - Use original filenames in zip
 
-###1.4.2###
+### 1.4.2 ###
  - Remove temporary zip after download
 
-###1.4.1###
+### 1.4.1 ###
  - Remove temporary zip assets
 
-###1.4.0###
+### 1.4.0 ###
  - Added support for all asset source types, so cloud files are now also supported
  - Added a MIT license
 
-###1.3.0###
+### 1.3.0 ###
  - Added support for assets in subfolders
 
-###1.2.1###
+### 1.2.1 ###
  - Fixed a bug where the asset path was parsed with the wrong variables
 
-###1.2.0###
+### 1.2.0 ###
  - Now supports source paths with objects (i.e. "{path}/assets")
 
-###1.1.0###
+### 1.1.0 ###
  - Now also callable as a service
  - Now uses Craft's interal zip system
  - Added unit tests
 
-###1.0.1###
+### 1.0.1 ###
  - You can now also download assets via GET
 
-###1.0###
+### 1.0 ###
  - Initial release
